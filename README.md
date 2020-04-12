@@ -1,27 +1,68 @@
-## <strong>Welcome to React Yahtzee! </strong>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Current Release: v1.1
+## Available Scripts
 
-### <strong> What's new in 1.1 </strong>
+In the project directory, you can run:
 
-- Modals now exist to help the user.  If a user clicks on the score table before they have completed all their rolls for the turn, or if the cell they click will score a zero and there are other cells that could register a non-zero score, a modal will pop up to advise them.
-- Game Restart now exists. When a game ends the roll button will switch to a 'new game' button. Clicking it will reset the scorecard and dice to a starting position.
-- A few styling changes were applied to make the game look and feel a lil nicer :)
+### `yarn start`
 
-### If you would like to run the game locally
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-...clone the repository, navigate to the directory containing the repository and run
-```
-npm install
-```
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-Then run
-```
-npm start
-```
-Open a browser and navigate to localhost:3000 to play the game!
+### `yarn test`
 
-Responses, feedback, and contributions related to React Yahtzee are welcomed. Future releases will include improved user interface and a database of high scores. For a related project, please see my Yahtzee Probability Calculator (written in Ruby), also on GitHub. Happy rolling! 
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- - - -
-<sub>(Yahtzee is owned by Hasbro. This open-source project is made for educational purposes and is not endorsed by or affiliated with Hasbro.)</sub>
+### `yarn build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
