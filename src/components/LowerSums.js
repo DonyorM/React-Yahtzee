@@ -1,5 +1,4 @@
 import React from "react";
-import {hot} from "react-hot-loader";
 import "../styles/Cell.css";
 
 const LowerSums = (props) => {
@@ -38,4 +37,4 @@ const LowerSums = (props) => {
   )
 }
 
-export default hot (module)(LowerSums);
+export default LowerSums;

@@ -1,5 +1,4 @@
 import React from "react"
-import {hot} from "react-hot-loader"
 import "../styles/DiceContainer.css"
 
 const GameOver = (props) => {
@@ -12,4 +11,4 @@ const GameOver = (props) => {
   )
 }
 
-export default hot (module) (GameOver)
+export default GameOver;

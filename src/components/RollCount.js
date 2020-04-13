@@ -1,5 +1,4 @@
 import React from "react"
-import {hot} from "react-hot-loader"
 
 const RollCount = (props) => {
   return (
@@ -16,4 +15,4 @@ const RollCount = (props) => {
   )
 }
 
-export default hot (module) (RollCount)
+export default RollCount;

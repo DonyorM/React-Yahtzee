@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import {hot} from "react-hot-loader"
 import "../styles/Cell.css"
 
 class Cell extends Component{
@@ -23,4 +22,4 @@ class Cell extends Component{
   }
 }
 
-export default hot (module)(Cell);
+export default Cell;

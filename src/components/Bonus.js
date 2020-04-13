@@ -1,5 +1,4 @@
 import React from "react";
-import {hot} from "react-hot-loader";
 
 const Bonus = (props) => {
   return (
@@ -11,4 +10,4 @@ const Bonus = (props) => {
   )
 }
 
-export default hot (module) (Bonus)
+export default Bonus;

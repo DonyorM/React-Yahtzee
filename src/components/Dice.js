@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {hot} from "react-hot-loader";
 
 // import images of dice faces
 import one from '../images/one.png';
@@ -23,4 +22,4 @@ class Dice extends Component {
 		)
 	}
 }
-export default hot(module)(Dice);
+export default Dice;

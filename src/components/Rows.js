@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import {hot} from "react-hot-loader"
 import Cell from "../components/Cell.js"
 
 const Rows = (props) => {
@@ -22,4 +21,4 @@ const Rows = (props) => {
   return (rows)
 }
 
-export default hot (module) (Rows)
+export default Rows;

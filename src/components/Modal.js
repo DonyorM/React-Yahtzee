@@ -1,7 +1,6 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import {hot} from "react-hot-loader"
-import "../styles/ScoreTable.css"
+import React from "react";
+import ReactDOM from "react-dom";
+import "../styles/ScoreTable.css";
 
 const Modal = (props) => {
   return (
@@ -17,7 +16,7 @@ const Modal = (props) => {
       </div>,
       document.body
     ) : null
-  )
-}
+  );
+};
 
-export default hot (module)(Modal)
+export default Modal;

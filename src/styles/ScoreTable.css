@@ -11,7 +11,9 @@ td {
 }
 .scorecard-canvas {
 	display: flex;
+  flex-direction: column;
 	padding: 4px;
+  margin: 4px;
 	background: moccasin;
 	border-radius: 10px;
 	box-shadow: -4px 4px 2px #555;
@@ -45,4 +47,12 @@ td {
 	width: 100%;
 	height: 100%;
 	z-index: 90;
+}
+.table-div {
+    display: flex;
+}
+.title {
+	  text-align: center;
+	  font-weight: bold;
+	  font-size: 20px;
 }
