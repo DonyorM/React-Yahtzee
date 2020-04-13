@@ -220,7 +220,7 @@ class DiceContainer extends Component {
                 div className = "app-container" >
                        <div className="nav">
                          <button onClick={() => this.reset()}>Reset</button>
-                     <button onClick={() => firebase.auth().signOut()}>Sign Out</button></div>
+                     <button onClick={this.props.signOut}>Sign Out</button></div>
                 <
                 div className = "dice-area" >
                 <

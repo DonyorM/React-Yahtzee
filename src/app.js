@@ -38,6 +38,11 @@ const App = () => {
         // Other config options...
     };
 
+    const signOut = () => {
+        firebase.auth().signOut();
+        setUserAuth(null);
+    };
+
     const setDisplayName = (name) => {
         firebase.auth().currentUser.updateProfile({
             displayName: name
@@ -51,7 +56,7 @@ const App = () => {
         <div className = "App" >
         {userAuth ?
          (userAuth.displayName ?
-          <DiceContainer username={userAuth.displayName} />
+          <DiceContainer username={userAuth.displayName} signOut={signOut} />
           :
           (<div>
              <input type="text" value={textVal} onChange={(evt) => setTextVal(evt.target.value)} />

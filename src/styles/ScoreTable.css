@@ -17,6 +17,7 @@ td {
 	background: moccasin;
 	border-radius: 10px;
 	box-shadow: -4px 4px 2px #555;
+  flex-basis: 48%;
 }
 .modal-div {
 	background: moccasin;
