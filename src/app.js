@@ -8,6 +8,8 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import DiceContainer from './containers/DiceContainer.js';
 import firebase from "./firebase";
 
+const firebaseui = require("firebaseui");
+
 const App = () => {
     const [userAuth, setUserAuth] = useState(null);
     const [textVal, setTextVal] = useState("");
@@ -28,9 +30,11 @@ const App = () => {
                 return false;
             },
         },
+        credentialHelper: firebaseui.auth.CredentialHelper.NONE,
         signInOptions: [
             {
                 provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                requireDisplayName: false
             }
         ],
         // Other config options...
