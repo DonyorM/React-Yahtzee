@@ -135,7 +135,6 @@ class DiceContainer extends Component {
         db.collection("tables").get().then((response) => {
             let batch = db.batch();
             response.docs.forEach((doc) => {
-                console.log("updating " + doc.id);
                 const docRef = db.collection("tables").doc(doc.id);
                 batch.update(docRef, {
                     active: [false, false, false, false, false, false, false,
@@ -155,7 +154,7 @@ class DiceContainer extends Component {
         });
     };
 
-    newGame = () => {
+    newGame = ({reset}) => {
         this.resetTables();
         this.firebaseState({
             roll: 0,
@@ -164,9 +163,18 @@ class DiceContainer extends Component {
             rollClicked: true,
             tableClicked: {},
             gameOver: false,
-            player: this.state.players,
-            currentUser: this.state.players[0] ? this.state.players[0] : ""
+            players: reset ? [] : this.state.players,
+            currentUser: !reset && this.state.players[0] ? this.state.players[0] : ""
         });
+        if (reset) {
+            db.collection("tables").get().then((colSnapshot) => {
+                const batch = db.batch();
+                colSnapshot.forEach((doc) => {
+                    batch.delete(db.collection("tables").doc(doc.id));
+                });
+                batch.commit().then(window.location.reload(false));
+            });
+        }
     }
 
     newTurn = () => {
@@ -210,7 +218,7 @@ class DiceContainer extends Component {
             modalTrigger: true,
             closeModal: () => this.setState({modalTrigger: false}),
             submitModal: () => {this.setState({modalTrigger: false});
-                                this.newGame();},
+                                this.newGame({reset: true});},
             modalMessage: "Are you sure you want to create a new game. All progress will be lost."
         });
     }
