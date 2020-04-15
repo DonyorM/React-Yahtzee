@@ -58,7 +58,7 @@ class TableContainer extends Component {
     }
 
     active = () => {
-        return this.currentlyPlaying &&
+        return this.currentlyPlaying() &&
             this.props.currentUser === this.props.username;
     }
 
@@ -81,7 +81,7 @@ class TableContainer extends Component {
     }
 
     cellIsClickable = (cell_id) => {
-        return (this.active && this.props.roll !== 0 && !this.props.tableClicked && !this.state.filled[cell_id]);
+        return (this.active() && this.props.roll !== 0 && !this.props.tableClicked && !this.state.filled[cell_id]);
     }
 
     setModalMessage = () => {

@@ -7,10 +7,10 @@ const RollButton = (props) => {
 			className={`roll-button${props.roll === 3? ' reroll' : ''}`}
 			      onClick={props.handleRollClick}
             disabled={!props.active}>
-			{props.gameOver ? 'NEW GAME' 
-			: (props.roll === 3? 'DONE!' : 'ROLL!')}
+			{props.gameOver ? 'NEW GAME'
+			 : (props.roll === 3 ? (props.active ? 'START!' : 'DONE!') : 'ROLL!')}
 		</button>
 	);
-}
+};
 
 export default RollButton;

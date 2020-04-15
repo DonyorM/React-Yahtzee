@@ -79,7 +79,8 @@ class DiceContainer extends Component {
                     const newPlayers = data.players.slice();
                     newPlayers.push(me.props.username);
                     game.update({
-                        players: newPlayers
+                        players: newPlayers,
+                        currentUser: data.currentUser === "" ? me.props.username : data.currentUser
                     });
                 }
             } else {
@@ -212,13 +213,13 @@ class DiceContainer extends Component {
         });
     }
 
-    reset = () => {
+    reset = (fullReset) => {
         //This shouldn't go to firebase
         this.setState({
             modalTrigger: true,
             closeModal: () => this.setState({modalTrigger: false}),
             submitModal: () => {this.setState({modalTrigger: false});
-                                this.newGame({reset: true});},
+                                this.newGame({reset: fullReset});},
             modalMessage: "Are you sure you want to create a new game. All progress will be lost."
         });
     }
@@ -227,7 +228,10 @@ class DiceContainer extends Component {
             return ( <
                 div className = "app-container" >
                        <div className="nav">
-                         <button onClick={() => this.reset()}>Reset</button>
+                         <div>
+                           <button onClick={() => this.reset(true)}>Reset</button>
+                           <button onClick={() => this.reset(false)}>New Game</button>
+                         </div>
                      <button onClick={this.props.signOut}>Sign Out</button></div>
                 <
                 div className = "dice-area" >
